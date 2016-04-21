@@ -19,7 +19,7 @@
 		var common;
 		// ENV.apiUrl + 
 		var commonUrl = 'misc/common.json';
-		var businessUrl = 'misc/businesses2.json';
+		var businessUrl = 'http://helloradio.com.br/apps/achou/businesses2.json';
 		var destaquesUrl = 'misc/destaques.json';
 		var categoriesUrl = 'misc/categories.json';
 
