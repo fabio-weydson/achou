@@ -1,3 +1,4 @@
+
 (function() {
 	'use strict';
 
@@ -14,17 +15,23 @@
 		var services = {};
 		var news = {};
 		var businesses;
+		var destaques={};
+		var categorias={};
 		var common;
 
 		var commonUrl = 'misc/common.json';
-		var businessUrl = 'http://helloradio.com.br/apps/achou/service.php';
+		var businessUrl = 'http://helloradio.com.br/apps/achou/businesses2.json';
+		var categoriesUrl = 'http://helloradio.com.br/apps/achou/categories.json';
+		var destaquesUrl = 'misc/destaques.json';
 
 		var service = {
 			getBusinesses: getBusinesses,
 			getBusiness: getBusiness,
+			getDestaques: getDestaques,
 			getBusinessesByCategory: getBusinessesByCategory,
 			getCategories: getCategories,
 			getCatalogs: getCatalogs,
+			getCategorias: getCategorias,
 			getCatalog: getCatalog,
 			getCommon: getCommon,
 			getProducts: getProducts,
@@ -124,6 +131,22 @@
 				return categories;
 			});
 		}
+			function getDestaques() {
+			return $http.get(destaquesUrl).then(function(response) {
+				destaques = response.data.result;
+				return destaques;
+			});
+		}
+
+		function getCategorias() {
+		
+			return $http.get(categoriesUrl).then(function(response) {
+				categorias = response.data.categorias;
+				return categorias;
+
+			});
+		}
+
 
 		function getBusinessesByCategory(category) {
 			var promise;

@@ -4,7 +4,7 @@
 
 .constant('ENV', {
 	name:'development',
-	dataProvider:'REMOTE',
+	dataProvider:'LOCAL',
 	firebaseUrl:'https://business-directory.firebaseio.com/',
 	youtubeKey:'AIzaSyDael5MmCQa1GKQNKQYypmBeB08GATgSEo',
 	ionicPrivateKey:'76bfc83c28ac08a93fe16515b2fd268810c8fd2cec42c821',
