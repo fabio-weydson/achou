@@ -1,0 +1,22 @@
+<ion-view view-title="Mapa">
+	<ion-content id="map-view" data-tap-disabled="true">
+	
+		<gmaps
+			center="vm.origin"
+			zoom="vm.zoom"
+			markers="vm.markers"> 
+		</gmaps>
+		<div id="infoBusiness" style="display:none"><!-- div class="list card">
+			<a class="item item-icon-left" ng-click="vm.showContactUs()">
+				<i class="icon ion-ios-time"></i>{{vm.businesses.name}}.{{vm.businesses.title}}
+				<span ng-if="vm.business.isBusinessOpen" class="balanced">Aberto</span>
+				<span ng-if="!vm.business.isBusinessOpen" class="assertive">Fechado</span>
+			</a>
+
+			<a class="item item-icon-left" ng-click="vm.getDirections()">
+				<i class="icon ion-navigate"></i>
+				<span><span ng-if="!!vm.business.distance">{{vm.business.distance}}</span> de distância. Me guie!</span>
+			</a>
+		</div> --></div>
+	</ion-content>
+</ion-view>

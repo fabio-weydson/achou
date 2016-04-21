@@ -1,0 +1,65 @@
+<ion-view view-title="Achou em Rondônia " class="businesses">
+	<ion-nav-buttons side="right">
+		<button class="button button-clear icon ion-ios-gear" ng-click="vm.showFilter()"></button>
+	</ion-nav-buttons>
+
+	<ion-content ng-init="vm.search = ''">
+		<!-- <ion-scroll zooming="true" direction="x" scrollbar-x="false" class="categories-filter">
+			<span ng-repeat="category in vm.categories">
+				<button class="button button-light filter-button"
+					ng-click="vm.filterByCategory(category)"
+					ng-class="{'active-filter-button': category === vm.selectedCategory}">
+					{{category}}
+				</button>
+			</span>
+		</ion-scroll> -->
+			<ion-slide-box class="destaques " ng-hide="vm.search">
+			
+			<ion-slide ng-repeat="destaque in vm.destaques">
+				<div class="box blue home-hello " ng-click="vm.navigate(destaque.guid)">
+					<img ng-src="{{destaque.img}}"/>	
+						<h2>{{destaque.title}}<span>{{destaque.category}}</span></h2>
+					
+				</div>
+
+			</ion-slide>
+		</ion-slide-box>
+		<div class="item search-box">
+			<input type="text" placeholder="Buscar/Filtrar" ng-model="vm.search" />
+			<button class="button button-clear icon ion-android-search"></button>
+		</div>
+		<div class="item item-thumbnail-left item-text-wrap"
+			ng-click="vm.navigate(business.guid)"
+			ng-repeat="business in vm.businesses | filter: { name: vm.search } | orderBy: vm.sortBy">
+			<img ng-src="{{business.logo}}">
+			<h2>{{business.name}}</h2>
+			<span class="distance">{{business.distance}}</span>
+			<div class="rating-container small"><rating ng-model="business.rating.value" readonly="true" max="5"></rating></div><h3 class="category">&nbsp;&nbsp;&bull; {{business.category}}</h3> 
+			<p>{{business.description | limitTo: 140 }}{{business.description.length > 140 ? '...' : ''}}</p>
+		</div>
+		<!-- <div class="tabs-striped tabs-color-assertive">
+    <div class="tabs">
+      <a class="tab-item active" href="#">
+        <i class="icon ion-home"></i>
+        Test
+      </a>
+      <a class="tab-item" href="#">
+        <i class="icon ion-star"></i>
+        Favorites
+      </a>
+      <a class="tab-item" href="#">
+        <i class="icon ion-gear-a"></i>
+        Alua
+      </a>
+    </div>
+  </div> -->
+	</ion-content>
+	<ion-footer-bar>
+  <div class="row">
+  	<div class="col">
+    <a href="#/app/businesses?fav=false" class="button button-full button-balanced button-clear  icon-left ion-ios-list">Ver lista</a>
+     </div><div class="col">
+    <a href="#/app/map" class="button button-full button-light button-clear icon-right ion-map">Ver mapa</a>
+  </div> </div>
+</ion-footer-bar>
+</ion-view>

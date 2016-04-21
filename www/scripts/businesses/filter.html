@@ -1,0 +1,34 @@
+<ion-modal-view>
+	<ion-header-bar>
+		<h1 class="title">Cidade e Filtros</h1>
+		<div class="buttons">
+			<button
+					class="button button-clear icon ion-checkmark"
+					ng-click="vm.applyFilters()"
+					style="color: #444;"></button>
+		</div>
+	</ion-header-bar>
+	<ion-content>
+		<div class="list">
+
+			<ion-item class="item-divider">Cidade Padrão</ion-item>
+			<ion-radio
+					name="cidade"
+					ng-repeat="cidade in vm.cidades"
+					ng-model="vm.selectedCidade"
+					ng-value="'{{cidade}}'">{{cidade}}</ion-radio>
+
+			<ion-item class="item-divider">Organizar por</ion-item>
+			<ion-radio name="sortBy" ng-model="vm.sortBy" ng-value="'name'">Nome</ion-radio>
+			<ion-radio name="sortBy" ng-model="vm.sortBy" ng-value="'distance'">Distância</ion-radio>
+
+			<ion-item class="item-divider">Categorias a exibir</ion-item>
+			<ion-radio
+					name="category"
+					ng-repeat="category in vm.categories"
+					ng-model="vm.selectedCategory"
+					ng-value="'{{category}}'">{{category}}</ion-radio>
+
+		</div>
+	</ion-content>
+</ion-modal-view>
