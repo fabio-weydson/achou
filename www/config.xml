@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- config.xml reference: https://build.phonegap.com/docs/config-xml -->
-<widget id          =    "com.achou.rondonia"
-        version     =    "0.3"
-        xmlns       =    "http://www.w3.org/ns/widgets"
-        xmlns:gap   =    "http://phonegap.com/ns/1.0"
-        versionCode =   "30">
+<widget xmlns     = "http://www.w3.org/ns/widgets"
+        xmlns:gap = "http://phonegap.com/ns/1.0"
+        xmlns:android = "http://schemas.android.com/apk/res/android"
+        id        = "com.achou.rondonia"
+        version   = "0.3">
+        
     <name>Achou em Rondônia</name>
 
     <description>
