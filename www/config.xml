@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- config.xml reference: https://build.phonegap.com/docs/config-xml -->
-<widget xmlns     = "http://www.w3.org/ns/widgets"
-        xmlns:gap = "http://phonegap.com/ns/1.0"
-        xmlns:android = "http://schemas.android.com/apk/res/android"
-        id        = "com.achou.rondonia"
-         versionCode = "20" 
-        version   = "0.2">
+<widget id          =    "com.achou.rondonia"
+        version     =    "0.3"
+        xmlns       =    "http://www.w3.org/ns/widgets"
+        xmlns:gap   =    "http://phonegap.com/ns/1.0"
+        versionCode =   "30">
     <name>Achou em Rondônia</name>
 
     <description>
@@ -66,6 +65,11 @@
     <gap:plugin name="it.witek.cordova.plugin.background-mode" source="pgb" version="0.6.3" />
     <gap:plugin name="nl.x-services.plugins.socialsharing" source="pgb" version="4.3.8" />
     <gap:plugin name="nl.x-services.plugins.toast" source="pgb" version="2.0.2" />
+
+    <gap:plugin name="com.ionic.keyboard" spec="1.0.3" source="pgb" />
+    <gap:plugin name="com.phonegap.plugins.pushplugin" source="pgb" spec="2.5.0" />
+
+   <gap:plugin name="de.appplant.cordova.plugin.email-composer" version="0.8.0" />
 
 
 <gap:icon src="icon.png" />
