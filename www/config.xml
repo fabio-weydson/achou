@@ -4,6 +4,7 @@
         xmlns:gap = "http://phonegap.com/ns/1.0"
         xmlns:android = "http://schemas.android.com/apk/res/android"
         id        = "com.achou.rondonia"
+        versionCode = "40"
         version   = "0.4">
     <name>Achou em Rondônia</name>
 
