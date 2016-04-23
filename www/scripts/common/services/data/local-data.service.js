@@ -18,13 +18,13 @@
 		var categorias={};
 		var common;
 		// ENV.apiUrl + 
-		var commonUrl = 'misc/common.json';
+		var commonUrl = 'http://helloradio.com.br/apps/achou/service.php?get=default';
 		// var businessUrl = 'misc/businesses2.json';
 		var destaquesUrl = 'misc/destaques.json';
 		// var categoriesUrl = 'misc/categories.json';
 
-		var businessUrl = 'http://helloradio.com.br/apps/achou/businesses2.json';
-		var categoriesUrl = 'http://helloradio.com.br/apps/achou/categories.json';
+		var businessUrl = 'http://helloradio.com.br/apps/achou/service.php?get=lista';
+		var categoriesUrl = 'http://helloradio.com.br/apps/achou/service.php?get=categorias';
 		// var destaquesUrl = 'http://helloradio.com.br/apps/achou/destaques.json';
 
 		var service = {

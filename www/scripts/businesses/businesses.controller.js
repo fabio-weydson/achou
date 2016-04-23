@@ -14,7 +14,7 @@
 			categories: null,
 			selectedCategory: 'Todas',
 			sortBy: 'name',
-			selectedCidade: 'Rio de Janeiro',
+			selectedCidade: 'Porto Velho',
 			businesses: [],
 			navigate: navigate,
 			filterByCategory: filterByCategory,
@@ -24,7 +24,7 @@
 		(function activate() {
 			loadDestaques();
 			loadBusinesses();
-			loadCategories();
+			// loadCategories();
 			loadCategorias();
 
 		})();
@@ -44,7 +44,7 @@
 
 		function showFilter() {
 			var scope = filterModal.scope;
-			var cidades = ["Rio de Janeiro","Sao Paulo"];
+			var cidades = ["Porto Velho"];
 			scope.vm = {
 				categories: vm.categories,
 				selectedCategory: vm.selectedCategory,
@@ -69,7 +69,7 @@
 		}
 		function loadCategorias() {
 			businessesService.getCategorias().then(function(categorias) {
-				vm.categorias = categorias;
+				vm.categories = categorias;
 			});
 		}
 

@@ -20,7 +20,10 @@
 				name: business.name,
 				category: business.category,
 				isInFavorites: favoriteBusinessesService.isInFavorites(business.guid),
-				rating: business.rating
+				rating: business.rating,
+				description: business.description,
+				phoneNumber: business.phoneNumber,
+				address: business.address
 			},
 			showNews: showNews,
 			showServices: showServices,

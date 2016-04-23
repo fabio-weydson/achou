@@ -4,7 +4,7 @@
         xmlns:gap = "http://phonegap.com/ns/1.0"
         xmlns:android = "http://schemas.android.com/apk/res/android"
         id        = "com.achou.rondonia"
-        version   = "0.3">
+        version   = "0.4">
     <name>Achou em Rondônia</name>
 
     <description>
@@ -43,6 +43,7 @@
     <!-- Do not auto hide splash on Android -->
     <preference name="SplashScreenDelay" value="10000"/>
     <preference name="phonegap-version" value="cli-5.2.0" />
+
     <!--
         Define a specific version of PhoneGap to build into your app.
         <preference name="phonegap-version"       value="cli-5.2.0" />

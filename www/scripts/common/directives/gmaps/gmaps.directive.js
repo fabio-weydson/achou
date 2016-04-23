@@ -193,6 +193,7 @@ angular.module('gMaps', [])
 				if (angular.isString(loc)) {
 					loc = scope.$eval(loc);
 				}
+				console.log(loc.lat+"_"+loc.lon)
 				return new google.maps.LatLng(loc.lat, loc.lon);
 			}
 

@@ -23,11 +23,15 @@
 			<ion-radio name="sortBy" ng-model="vm.sortBy" ng-value="'distance'">Distância</ion-radio>
 
 			<ion-item class="item-divider">Categorias a exibir</ion-item>
+				<ion-radio
+					name="category"
+					ng-model="vm.selectedCategory"
+					ng-value="'Todas'">Todas</ion-radio>
 			<ion-radio
 					name="category"
 					ng-repeat="category in vm.categories"
 					ng-model="vm.selectedCategory"
-					ng-value="'{{category}}'">{{category}}</ion-radio>
+					ng-value="'{{category.title}}'">{{category.title}}</ion-radio>
 
 		</div>
 	</ion-content>
