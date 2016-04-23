@@ -23,7 +23,7 @@
 				rating: business.rating,
 				description: business.description,
 				phoneNumber: business.phoneNumber,
-				address: business.address
+				officeLocation: business.officeLocation
 			},
 			showNews: showNews,
 			showServices: showServices,
